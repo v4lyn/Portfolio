@@ -1,0 +1,288 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Unicode';
+    background: #8ab2a6;
+    color: #f6f1de;
+    width: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f6f1de;
+    padding: 1.5%;
+    z-index: 1000;
+    box-shadow: 0px 5px 10px #0000001a;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0.5% 15%;
+}
+
+nav a img {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #3e3f5b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1% 20px;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background: #3e3f5b;
+    border-radius: 50px;
+}
+
+#projects {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 95px 0;
+}
+
+.projects-container {
+    height: auto;
+    width: 67%;
+    padding-top: 7%;
+    padding-left: 21%;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 12%;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: #3e3f5b;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-down .arrow {
+    font-size: 1.3rem;
+    color: #f6f1de;
+}
+
+#commissions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 2%;
+    width: 100%;
+    background-color: #f6f1de;
+}
+
+.commission-prices {
+    background-color: #3e3f5b;
+    text-align: center;
+    color: #f6f1de;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    height: 80%;
+    justify-self: end;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.slideshow-container {
+    position: relative;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    justify-self: start;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: fadeEffect 9s infinite;
+}
+
+.slide img {
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+@keyframes fadeEffect {
+    0%, 100% { opacity: 0; }
+    33.33% { opacity: 1; }
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 6s; }
+.slide:nth-child(3) { animation-delay: 9s; }
+.slide:nth-child(4) { animation-delay: 12s; }
+.slide:nth-child(5) { animation-delay: 15s; }
+.slide:nth-child(6) { animation-delay: 18s; }
+
+#contact {
+    padding: 10%;
+    margin-left: 20%;
+    font-size: 1.5rem;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3e3f5b;
+    color: white;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 1% 5%;
+    }
+
+    .projects-container {
+        width: 80%;
+        padding-left: 10%;
+    }
+
+    #commissions {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .commission-prices,
+    .slideshow-container {
+        width: 80%;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 1% 3%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .projects-container {
+        width: 90%;
+        padding-left: 5%;
+    }
+
+    .scroll-down {
+        bottom: 5%;
+        left: 50%;
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .commission-prices,
+    .slideshow-container {
+        width: 90%;
+    }
+
+    #about {
+        flex-direction: column;
+        padding: 8%;
+    }
+
+    .details img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    nav a img {
+        width: 90px;
+    }
+
+    .projects-container {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .scroll-down {
+        bottom: 3%;
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+
+    .commission-prices,
+    .slideshow-container {
+        width: 100%;
+    }
+
+    #contact {
+        padding: 5%;
+        margin-left: 0;
+        text-align: center;
+    }
+}
