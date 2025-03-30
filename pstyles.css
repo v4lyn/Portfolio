@@ -199,7 +199,6 @@ footer {
     .projects-container {
         width: 80%;
         padding-left: 10%;
-        margin-top: 20%;
     }
 
     #commissions {
@@ -217,48 +216,23 @@ footer {
 
 @media screen and (max-width: 768px) {
     nav {
-        display: flex;
+        padding: 1%;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
-        position: fixed;
-    }
-
-    nav a {
-        display: flex;
-        justify-content: center;
-        width: 100%;
     }
 
     nav ul {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    nav ul li {
-        width: auto;
+        gap: 10px;
         text-align: center;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
+        padding-top: 10px;
     }
 
     .projects-container {
-    height: auto;
-    width: 67%;
-    padding-top: 7%;
-    margin-top: 20%;
-    text-align: center;
-}
+        width: 90%;
+        padding-left: 5%;
+        margin-top: 10%
+    }
 
     .scroll-down {
         bottom: 5%;
@@ -292,14 +266,15 @@ footer {
     }
 
     .projects-container {
-        width: 90%;
-        margin: 0 auto;
-        padding: 5% 0;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
     }
 
     .scroll-down {
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 3%;
+        font-size: 0.9rem;
+        padding: 6px 15px;
     }
 
     .commission-prices,
