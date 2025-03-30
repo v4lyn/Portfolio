@@ -222,10 +222,21 @@ footer {
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
         text-align: center;
-        padding-top: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
     }
 
     .projects-container {
